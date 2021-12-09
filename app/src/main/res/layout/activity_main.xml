@@ -46,26 +46,43 @@
             android:textSize="@dimen/text_normal"
             android:layout_height="wrap_content"/>
 
-        <EditText
-            android:id="@+id/ed_username"
-            android:inputType="text"
-            android:hint="Username"
-            android:layout_marginTop="@dimen/medium_margin"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
 
-        <EditText
-            android:id="@+id/ed_password"
-            android:hint="Password"
-            android:layout_marginTop="@dimen/small_margin"
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ed_username"
+                android:inputType="text"
+                android:hint="Username"
+                android:layout_marginTop="@dimen/medium_margin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            app:endIconMode="password_toggle"
+
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <EditText
+                android:id="@+id/ed_password"
+                android:hint="Password"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_width="match_parent"
+                android:inputType="numberPassword"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
             android:text="forget password?"
             android:textStyle="bold"
             android:textColor="@color/black"
             android:layout_gravity="end"
+
             android:layout_marginEnd="@dimen/medium_margin"
             android:layout_marginTop="18dp"
             android:layout_width="wrap_content"
